@@ -1,7 +1,7 @@
 Requirements
 ---
 
-* PHP 5.6
+* PHP ~~5.6~~ 5.4
 * NodeJS
 * Grunt CLI
 * Bower
