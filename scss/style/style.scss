@@ -1,0 +1,67 @@
+$ui-color-body: #666;
+$ui-color-orange: #f60;
+
+html {
+
+}
+
+body {
+  color: $ui-color-body;
+  background: inherit;
+  font-weight: 300;
+}
+
+a {
+  transition: color .3s, border-color .3s;
+}
+
+nav {
+  a {
+    border: 3px solid $ui-color-body;
+    border-radius: 50%;
+    margin: .5rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 2rem;
+    height: 2rem;
+
+    &.ru {
+      background-image: url('/asset/img/flags/ru.svg');
+    }
+    &.en {
+      background-image: url('/asset/img/flags/en.svg');
+    }
+
+    @include state() {
+      border-color: $ui-color-orange;
+    }
+  }
+}
+
+.nav {
+  background-color: #333;
+}
+
+.about {
+  font-size: 2rem;
+}
+
+.media {
+  &-body {
+    color: $ui-color-orange;
+
+    h2 {
+      color: $gray-dark;
+      font-weight: normal;
+    }
+  }
+}
+
+@each $bp in map-keys($grid-breakpoints) {
+  .col-#{$bp}-box {
+    @include media-breakpoint-down($bp) {
+      padding-top: ($grid-gutter-width / 2);
+      padding-bottom: ($grid-gutter-width / 2);
+    }
+  }
+}

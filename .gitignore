@@ -1,2 +1,11 @@
+.idea/
+
+node_modules/
+bower_components/
+
+asset/fonts/
+asset/style.css
+asset/script.js
+
 .sass-cache
 *.css.map

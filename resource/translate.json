@@ -1,0 +1,30 @@
+{
+  "meta_title": {
+    "ru": "Резюме",
+    "en": "Resume"
+  },
+  "Change language": {
+    "ru": "Сменить язык"
+  },
+
+  "Dmitry Romanov": {
+    "ru": "Дмитрий Романов"
+  },
+  "Dmitry Solovyov": {
+    "ru": "Дмитрий Соловьев"
+  },
+
+  "city": {
+    "ru": "Воронеж, Россия",
+    "en": "Voronezh, Russia"
+  },
+
+  "about_us": {
+    "ru": "Разработка полного цикла и поддержка web-приложений: сайтов, лендингов, визиток, малых и средних проектов. Наша команда состоит из нескольких  web-разработчиков с высшим образованием, имеющих за плечами многолетний опыт совместной работы.",
+    "en": "Full stack development and maintenance of web applications: sites, landings, business cards, small and medium-sized projects. Our team consists of some web developers with higher education and years of experience."
+  },
+
+  "Open": {
+    "ru": "Открыть"
+  }
+}

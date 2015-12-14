@@ -1,0 +1,14 @@
+default:
+  tasks:
+    - clean
+    - copy
+    - sass:dev
+    #- uglify
+    - watch:sass_dev
+
+prod:
+  tasks:
+    - clean
+    - copy
+    - sass:prod
+    #- uglify

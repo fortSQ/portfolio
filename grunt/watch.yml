@@ -1,0 +1,11 @@
+sass_dev:
+    files:
+        - scss/**/*.scss
+    tasks:
+        - sass:dev
+
+uglify:
+    files:
+        - js/**/*.js
+    tasks:
+        - uglify:main

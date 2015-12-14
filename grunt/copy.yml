@@ -1,0 +1,14 @@
+default:
+  files:
+    -
+      expand: true
+      flattern: true
+      cwd: bower_components/roboto-fontface/fonts
+      src: "*"
+      dest: asset/fonts/roboto
+    -
+      expand: true
+      flattern: true
+      cwd: bower_components/components-font-awesome/fonts
+      src: "*"
+      dest: asset/fonts/font-awesome

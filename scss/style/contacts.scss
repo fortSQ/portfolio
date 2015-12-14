@@ -1,0 +1,11 @@
+.contacts {
+  color: #999;
+
+  a {
+    color: inherit;
+    @include state() {
+      color: $ui-color-body;
+      text-decoration: none;
+    }
+  }
+}

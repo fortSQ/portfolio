@@ -1,0 +1,34 @@
+[
+  {
+    "description": {
+      "ru": "Сервис LiteMF - международная логистика",
+      "en": "LiteMF - international logistics"
+    },
+    "link": "//litemf.com",
+    "img": "litemf.png"
+  },
+  {
+    "description": {
+      "ru": "Мотосалон Бензо36 - мототехника, товары для дачи",
+      "en": "Benzo36 - motorbike salon"
+    },
+    "link": "//benzo36.ru",
+    "img": "benzo36.png"
+  },
+  {
+    "description": {
+      "ru": "FatNoMore - интернет-магазин Ширатаки",
+      "en": "FatNoMore - online store Shirataki"
+    },
+    "link": "//fatnomore.ru",
+    "img": "fatnomore.png"
+  },
+  {
+    "description": {
+      "ru": "Orbita - электронные замки для гостиниц и отелей",
+      "en": "Orbita - electronic locks for hotels"
+    },
+    "link": "//orbitateh.ru/",
+    "img": "orbitateh.png"
+  }
+]

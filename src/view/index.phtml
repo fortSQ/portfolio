@@ -1,0 +1,118 @@
+<? /** @var Application $this */ ?>
+
+<!DOCTYPE html>
+<html lang="<?= $this->getCurrentLanguage() ?>">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title><?= $this->translate('meta_title') ?></title>
+    <link href="/asset/style.css" rel="stylesheet">
+</head>
+<body>
+
+<? $anotherLang = $this->getCurrentLanguage() == 'ru' ? 'en' : 'ru' ?>
+
+<section class="nav">
+    <nav class="container">
+        <a class="pull-right <?= $anotherLang ?>" href="/change-lang.php?lang=<?= $anotherLang ?>" title="<?= $this->translate('Change language') ?>"></a>
+    </nav>
+</section>
+
+<section class="container">
+    <div class="row">
+        <div class="col-sm-12"><?= $this->getRequest()->name ?></div>
+    </div>
+    <div class="row m-t-3">
+        <div class="col-lg-6 col-md-box">
+            <div class="media">
+                <a class="media-left" href="/asset/img/romanov.jpg">
+                    <img class="media-object" src="/asset/img/romanov.jpg" alt="<?= $this->translate('Dmitry Romanov') ?>">
+                </a>
+                <div class="media-body lead">
+                    <h2 class="media-heading"><?= $this->translate('Dmitry Romanov') ?></h2>
+                    PHP, UI / UX design
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6 col-md-box">
+            <div class="media">
+                <a class="media-left" href="/asset/img/solovyov.jpg">
+                    <img class="media-object" src="/asset/img/solovyov.jpg" alt="<?= $this->translate('Dmitry Solovyov') ?>">
+                </a>
+                <div class="media-body lead">
+                    <h2 class="media-heading"><?= $this->translate('Dmitry Solovyov') ?></h2>
+                    Java, AngularJS
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="row contacts">
+        <div class="col-lg-3 col-md-box lead text-xs-center text-lg-left">
+            <i class="fa fa-fw fa-map-marker"></i> <a href="//google.com/maps/place/Voronezh" target="_blank"><?= $this->translate('city') ?></a>
+        </div>
+        <div class="col-lg-3 col-md-box lead text-xs-center text-lg-left">
+            <i class="fa fa-fw fa-envelope"></i> <a href="mailto:<?= $this->getConfig('email') ?>"><?= $this->getConfig('email') ?></a>
+        </div>
+        <div class="col-lg-3 col-md-box lead text-xs-center text-lg-left">
+            <? $ph = $this->getConfig('phone') ?>
+            <i class="fa fa-fw fa-mobile"></i> <a href="tel:+7<?= $this->getConfig('phone') ?>">+7 (<?= substr($ph, 0, 3) ?>) <?= substr($ph, 3, 3) ?>-<?= substr($ph, 6, 2) ?>-<?= substr($ph, 8, 2) ?></a>
+        </div>
+        <div class="col-lg-3 col-md-box lead text-xs-center text-lg-left">
+            <i class="fa fa-fw fa-skype"></i> <a href="skype:<?= $this->getConfig('skype') ?>"><?= $this->getConfig('skype') ?></a>
+        </div>
+    </div>
+    <hr>
+    <p class="about m-y-2"><?= $this->translate('about_us') ?></p>
+</section>
+
+<section class="technology p-y-3">
+    <div class="container">
+        <div class="row text-xs-center text-sm-left">
+            <? $columnCount = 6 ?>
+            <? $itemsPerColumn = ceil(count($context['technologies']) / $columnCount) ?>
+            <? for ($i = 0; $i < $columnCount; $i++) : ?>
+                <div class="col-xs-6 col-sm-3 col-md-2">
+                    <? for ($j = $i * $itemsPerColumn; $j < ($i + 1) * $itemsPerColumn; $j++) : ?>
+                        <? if (isset($context['technologies'][$j])) : ?>
+                            <div class="technology__item">
+                                <span><?= $context['technologies'][$j] ?></span>
+                            </div>
+                        <? else : ?>
+                            <? break ?>
+                        <? endif ?>
+                    <? endfor ?>
+                </div>
+            <? endfor ?>
+        </div>
+    </div>
+</section>
+
+<section class="project">
+    <div class="container">
+        <div class="row p-y-3">
+            <? foreach ($context['projects'] as $project) : ?>
+                <div class="col-sm-6 col-lg-4">
+                    <div class="project__item">
+                        <img class="img-fluid" src="/asset/img/projects/<?= $project['img'] ?>">
+                        <article>
+                            <div class="table">
+                                <div class="table-cell center">
+                                    <p><?= $project['description'][$this->getCurrentLanguage()] ?></p>
+                                    <? if (isset($project['link'])) : ?>
+                                        <div class="p-t-1">
+                                            <a href="<?= $project['link'] ?>" target="_blank"><?= $this->translate('Open') ?></a>
+                                        </div>
+                                    <? endif ?>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            <? endforeach ?>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>

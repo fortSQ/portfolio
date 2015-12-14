@@ -1,0 +1,69 @@
+.project {
+  background-color: #f6f6f6;
+
+  &__item {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: ($grid-gutter-width / 2);
+    @include box-shadow(0 .4rem 1rem rgba(black, .3));
+
+    img {
+      transition: .3s;
+
+      + article {
+        transition: .3s;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(black, .8);
+        opacity: 0;
+        color: white;
+
+        .table-cell.center {
+          padding: ($grid-gutter-width / 2);
+        }
+
+        a {
+          display: inline-block;
+          border: 1px solid white;
+          border-radius: .25em;
+          padding: .5em 2em;
+          color: white;
+
+          @include state() {
+            color: $ui-color-orange;
+            border-color: $ui-color-orange;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+
+    &:hover {
+      img {
+        transform: scale(1.2) rotate(8deg);
+
+        + article {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+.table {
+  display: table;
+  width: 100%;
+  height: 100%;
+
+  .table-cell {
+    display: table-cell;
+
+    &.center {
+      vertical-align: middle;
+      text-align: center;
+    }
+  }
+}

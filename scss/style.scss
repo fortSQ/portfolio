@@ -1,0 +1,34 @@
+$font-family-sans-serif: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$link-color: #1b9;
+
+$enable-shadows: true;
+
+@import "../bower_components/bootstrap/scss/bootstrap-reboot";
+
+@import "../bower_components/bootstrap/scss/bootstrap-grid";
+
+@import "../bower_components/bootstrap/scss/utilities-responsive";
+
+@import "../bower_components/bootstrap/scss/media";
+
+@import "../bower_components/bootstrap/scss/mixins";
+
+@import "../bower_components/bootstrap/scss/utilities";
+
+@import "../bower_components/bootstrap/scss/utilities-spacing";
+
+@import "../bower_components/bootstrap/scss/images";
+
+@import "../bower_components/bootstrap/scss/type";
+
+$fa-font-path: "/asset/fonts/font-awesome";
+@import "../bower_components/components-font-awesome/scss/font-awesome";
+
+$roboto-font-path:"/asset/fonts/roboto";
+@import "../bower_components/roboto-fontface/css/roboto-fontface";
+
+@import "style/mixins";
+@import "style/style";
+@import "style/contacts";
+@import "style/project";
+@import "style/technology";

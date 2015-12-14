@@ -1,0 +1,21 @@
+main:
+  options:
+    mangle:
+      except: ["jQuery"]
+    sourceMap: true
+  files:
+    public_html/js/_compiled/grunt/frontend.js: # самопис
+      - frontend/js/**/*.js
+
+vendors:
+  options:
+    mangle:
+      except: ["jQuery"]
+    sourceMap: false
+  files:
+    public_html/js/_compiled/grunt/frontend_head.js: # скрипты в <head>
+      - vendor-web/lodash/lodash.min.js
+      - vendor-web/jquery/dist/jquery.min.js
+    public_html/js/_compiled/grunt/frontend_vendor.js: # скрипты в конце <body>
+      - vendor-web/owlcarousel/owl-carousel/owl.carousel.min.js
+      - vendor-web/fancybox/source/jquery.fancybox.pack.js

@@ -1,0 +1,15 @@
+dev:
+  options:
+    debugInfo: true
+    lineNumbers: true
+    style: expanded
+    update: true
+  files:
+    asset/style.css: scss/style.scss
+
+prod:
+  options:
+    style: compressed
+    sourcemap: none
+  files:
+    asset/style.css: scss/style.scss

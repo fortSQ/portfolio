@@ -1,0 +1,15 @@
+{
+  "name": "portfolio",
+  "authors": [
+    "Dmitry V. Romanov <fortsq@gmail.com>",
+    "Dmitry A. Solovyov <d.a.solovyov@me.com>"
+  ],
+  "description": "business card site",
+  "license": "MIT",
+  "homepage": "romanov-vrn.ru",
+  "dependencies": {
+    "bootstrap": "v4.0.0-alpha.2",
+    "components-font-awesome": "~4.5.0",
+    "roboto-fontface": "~0.4.3"
+  }
+}

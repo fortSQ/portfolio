@@ -1,0 +1,18 @@
+.technology {
+  background: url('/asset/img/bg.jpg') left bottom no-repeat;
+  background-size: cover;
+
+  &__item {
+    margin-bottom: .5rem;
+
+    span {
+      border: 1px solid #ccc;
+      padding: .5em 1em;
+      font-size: .75em;
+      line-height: 2.5em;
+      color: white;
+      border-radius: .25em;
+      white-space: nowrap;
+    }
+  }
+}
