@@ -13,10 +13,11 @@ Go to the project folder and execute commands:
 
 * `npm install`
 * `bower install`
+* `grunt prod`
 
 In `php.ini` enables short tag *<?* - `short_open_tag = On`
 
-After run in console `grunt prod` and run built-in PHP server `php -S localhost:80`
+After run built-in PHP server `php -S localhost:80`
 
 Work steps development
 ---
@@ -45,14 +46,14 @@ How to
 
 ### Add translate
 In file `resource/translate.json` add
-```
+```json
 "KEY": {
     "ru": "Русский",
     "en": "English"
 }
 ```
 In view get translation by **key**
-```
+```php
 $this->translate('KEY');
 ```
 If translation isn't found, system print *key*
@@ -62,7 +63,7 @@ In file `resource/technologies.json` add string to array
 
 ### Add project
 In file `resource/projects.json` add
-```
+```json
 {
     "description": {
       "ru": "Русский коммент",
@@ -72,14 +73,16 @@ In file `resource/projects.json` add
     "img": "site.png"
   }
 ```
+*img* must have 500x500 dimensions
+
 **P.S.** If `link` is not defined, button "Open" would be hide
 
 ### Add key-value item
 In file `src/config.ini` add
-```
+```ini
 key = value
 ```
 And use this as
-```
+```php
 $app->getConfig('key');
 ```
