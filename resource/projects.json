@@ -30,5 +30,12 @@
     },
     "link": "//orbitateh.ru/",
     "img": "orbitateh.png"
+  },
+  {
+    "description": {
+      "ru": "Реформа - фитнесс проект",
+      "en": "Reform - the fitness project"
+    },
+    "img": "reformaproject.png"
   }
 ]
