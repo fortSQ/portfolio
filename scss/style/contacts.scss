@@ -1,6 +1,9 @@
 .contacts {
-  color: #999;
-
+  background-color: #999;
+  color: white;
+  padding: 2.5rem 0;
+  margin: 2rem 0;
+  
   a {
     color: inherit;
     @include state() {
