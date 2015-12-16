@@ -1,15 +1,12 @@
 dev:
   options:
-    debugInfo: true
-    lineNumbers: true
-    style: expanded
-    update: true
+    sourceComments: true
+    outputStyle: expanded
   files:
     asset/style.css: scss/style.scss
 
 prod:
   options:
-    style: compressed
-    sourcemap: none
+    outputStyle: compressed
   files:
     asset/style.css: scss/style.scss
