@@ -17,7 +17,11 @@ Go to the project folder and execute commands:
 
 In `php.ini` enables short tag *<?* - `short_open_tag = On`
 
-After run built-in PHP server `php -S localhost:80`
+Usage
+---
+
+* run `grunt` command in work directory, which listen all file changes
+* run built-in PHP server `php -S localhost:80`
 
 Work steps development
 ---
@@ -40,6 +44,8 @@ Work steps development
 * `npm install grunt-contrib-sass --save`
 * `npm install grunt-contrib-uglify --save`
 * `npm install grunt-contrib-watch --save`
+* delete `grunt-contrib-sass` folder in `node_modules` (`npm unistall` doesn't work)
+* `npm install grunt-sass --save`
 
 How to
 ---

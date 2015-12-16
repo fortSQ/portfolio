@@ -24,8 +24,8 @@ $enable-shadows: true;
 $fa-font-path: "/asset/fonts/font-awesome";
 @import "../bower_components/components-font-awesome/scss/font-awesome";
 
-$roboto-font-path:"/asset/fonts/roboto";
-@import "../bower_components/roboto-fontface/css/roboto-fontface";
+$roboto-font-path: "/asset/fonts/roboto";
+@import "../bower_components/roboto-fontface/css/roboto-fontface.scss";
 
 @import "style/mixins";
 @import "style/style";
