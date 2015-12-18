@@ -46,35 +46,27 @@
             </div>
         </div>
     </div>
-</section>
-
-<section class="contacts-container">
-    <div class="contacts">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-md-box lead text-xs-center text-lg-left">
-                    <i class="fa fa-fw fa-map-marker"></i> <a href="//google.com/maps/place/Voronezh" target="_blank"><?= $this->translate('city') ?></a>
-                </div>
-                <div class="col-lg-3 col-md-box lead text-xs-center text-lg-left">
-                    <i class="fa fa-fw fa-envelope"></i> <a href="mailto:<?= $this->getConfig('email') ?>"><?= $this->getConfig('email') ?></a>
-                </div>
-                <div class="col-lg-3 col-md-box lead text-xs-center text-lg-left">
-                    <? $ph = $this->getConfig('phone') ?>
-                    <i class="fa fa-fw fa-mobile"></i> <a href="tel:+7<?= $this->getConfig('phone') ?>">+7 (<?= substr($ph, 0, 3) ?>) <?= substr($ph, 3, 3) ?>-<?= substr($ph, 6, 2) ?>-<?= substr($ph, 8, 2) ?></a>
-                </div>
-                <div class="col-lg-3 col-md-box lead text-xs-center text-lg-left">
-                    <i class="fa fa-fw fa-skype"></i> <a href="skype:<?= $this->getConfig('skype') ?>"><?= $this->getConfig('skype') ?></a>
-                </div>
-            </div>
+    <hr>
+    <div class="row contacts">
+        <div class="col-lg-3 col-md-box lead text-xs-center text-lg-left">
+            <i class="fa fa-fw fa-map-marker"></i> <a href="//google.com/maps/place/Voronezh" target="_blank"><?= $this->translate('city') ?></a>
+        </div>
+        <div class="col-lg-3 col-md-box lead text-xs-center text-lg-left">
+            <i class="fa fa-fw fa-envelope"></i> <a href="mailto:<?= $this->getConfig('email') ?>"><?= $this->getConfig('email') ?></a>
+        </div>
+        <div class="col-lg-3 col-md-box lead text-xs-center text-lg-left">
+            <? $ph = $this->getConfig('phone') ?>
+            <i class="fa fa-fw fa-mobile"></i> <a href="tel:+7<?= $this->getConfig('phone') ?>">+7 (<?= substr($ph, 0, 3) ?>) <?= substr($ph, 3, 3) ?>-<?= substr($ph, 6, 2) ?>-<?= substr($ph, 8, 2) ?></a>
+        </div>
+        <div class="col-lg-3 col-md-box lead text-xs-center text-lg-left">
+            <i class="fa fa-fw fa-skype"></i> <a href="skype:<?= $this->getConfig('skype') ?>"><?= $this->getConfig('skype') ?></a>
         </div>
     </div>
+    <hr>
+    <p class="about m-y-4"><?= $this->translate('about_us') ?></p>
 </section>
 
-<section class="about container">
-    <p class="about m-y-3"><?= $this->translate('about_us') ?></p>
-</section>
-
-<section class="technology p-y-3">
+<section class="technology p-y-3" data-stellar-background-ratio="0.2" data-stellar-vertical-offset="2000">
     <div class="container">
         <div class="row text-xs-center text-sm-left">
             <? $columnCount = 6 ?>
@@ -121,6 +113,8 @@
         </div>
     </div>
 </section>
+
+<script src="/asset/script.js"></script>
 
 </body>
 </html>

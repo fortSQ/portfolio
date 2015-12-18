@@ -1,6 +1,9 @@
 .technology {
-  background: url('/asset/img/bg.jpg') left bottom no-repeat;
+  background: url('/asset/img/bg.jpg');
+  background-position: left bottom;
+  background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
 
   &__item {
     margin-bottom: .5rem;
