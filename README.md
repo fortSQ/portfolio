@@ -21,7 +21,9 @@ Usage
 ---
 
 * run `grunt` command in work directory, which listen all file changes
-* run built-in PHP server `php -S localhost:80`
+* run built-in PHP server:
+    * `cd web`
+    * `php -S localhost:80`
 
 Work steps development
 ---

@@ -26,10 +26,10 @@ nav {
     height: 2rem;
 
     &.ru {
-      background-image: url('/web/img/flags/ru.svg');
+      background-image: url('/img/flags/ru.svg');
     }
     &.en {
-      background-image: url('/web/img/flags/en.svg');
+      background-image: url('/img/flags/en.svg');
     }
 
     @include state() {
