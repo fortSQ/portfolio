@@ -1,5 +1,5 @@
 default:
   src:
-    - "asset/fonts/**/*"
-    - "asset/style.css"
-    - "asset/script.js"
+    - "web/fonts/**/*"
+    - "web/style.css"
+    - "web/script.js"

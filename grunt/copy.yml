@@ -5,10 +5,10 @@ default:
       flattern: true
       cwd: bower_components/roboto-fontface/fonts
       src: "*"
-      dest: asset/fonts/roboto
+      dest: web/fonts/roboto
     -
       expand: true
       flattern: true
       cwd: bower_components/components-font-awesome/fonts
       src: "*"
-      dest: asset/fonts/font-awesome
+      dest: web/fonts/font-awesome
