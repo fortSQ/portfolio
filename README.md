@@ -51,7 +51,7 @@ How to
 ---
 
 ### Add translate
-In file `resource/translate.json` add
+In file `app/Resources/translate.json` add
 ```json
 "KEY": {
     "ru": "Русский",
@@ -65,10 +65,10 @@ $this->translate('KEY');
 If translation isn't found, system print *key*
 
 ### Add technology
-In file `resource/technologies.json` add string to array
+In file `app/Resources/technologies.json` add string to array
 
 ### Add project
-In file `resource/projects.json` add
+In file `app/Resources/projects.json` add
 ```json
 {
     "description": {
@@ -84,7 +84,7 @@ In file `resource/projects.json` add
 **P.S.** If `link` is not defined, button "Open" would be hide
 
 ### Add key-value item
-In file `src/config.ini` add
+In file `app/config/config.ini` add
 ```ini
 key = value
 ```
