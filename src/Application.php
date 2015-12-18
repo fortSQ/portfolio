@@ -8,7 +8,7 @@ require_once 'LanguageService.php';
 
 class Application
 {
-    const CONFIG_FILE = PROJECT_PATH . '/app/config/config.ini';
+    const CONFIG_FILE = '/app/config/config.ini';
 
     private $config;
 
@@ -40,7 +40,7 @@ class Application
 
     private function initConfig()
     {
-        $this->config = parse_ini_file(self::CONFIG_FILE);
+        $this->config = parse_ini_file(PROJECT_PATH . self::CONFIG_FILE);
     }
 
     public function getConfig($name)
