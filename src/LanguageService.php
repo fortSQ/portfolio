@@ -12,10 +12,10 @@ class LanguageService extends Service
 
     protected $name = 'lang';
 
-    public static function init(Application $app)
+    public static function register(Application $app)
     {
         /** @var self $instance */
-        $instance = parent::init($app);
+        $instance = parent::register($app);
         $instance->setLanguage();
         return $instance;
     }
@@ -45,7 +45,7 @@ class LanguageService extends Service
     public function translate($message)
     {
         if (!$this->translateList) {
-            $translateFile = file_get_contents(realpath(__DIR__ . DIRECTORY_SEPARATOR . $this->app->getConfig('translate_path')));
+            $translateFile = file_get_contents(PROJECT_PATH . $this->app->getConfig('translate_path'));
             $this->translateList = json_decode($translateFile, true);
         }
         return isset($this->translateList[$message][$this->getLanguage()])

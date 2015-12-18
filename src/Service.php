@@ -14,7 +14,7 @@ abstract class Service
      *
      * @return static
      */
-    public static function init(Application $app)
+    public static function register(Application $app)
     {
         return new static($app);
     }

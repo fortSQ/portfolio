@@ -13,5 +13,5 @@ vendors:
       except: ["jQuery"]
     sourceMap: false
   files:
-    asset/script.js:
+    web/script.js:
       - bower_components/jquery/dist/jquery.min.js

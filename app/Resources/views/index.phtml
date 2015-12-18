@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <title><?= $this->translate('meta_title') ?></title>
-    <link href="/asset/style.css" rel="stylesheet">
+    <link href="/web/style.css" rel="stylesheet">
 </head>
 <body>
 
@@ -25,8 +25,8 @@
     <div class="row m-t-3">
         <div class="col-lg-6 col-md-box">
             <div class="media">
-                <a class="media-left" href="/asset/img/romanov.jpg">
-                    <img class="media-object" src="/asset/img/romanov.jpg" alt="<?= $this->translate('Dmitry Romanov') ?>">
+                <a class="media-left" href="/web/img/romanov.jpg">
+                    <img class="media-object" src="/web/img/romanov.jpg" alt="<?= $this->translate('Dmitry Romanov') ?>">
                 </a>
                 <div class="media-body lead">
                     <h2 class="media-heading"><?= $this->translate('Dmitry Romanov') ?></h2>
@@ -36,8 +36,8 @@
         </div>
         <div class="col-lg-6 col-md-box">
             <div class="media">
-                <a class="media-left" href="/asset/img/solovyov.jpg">
-                    <img class="media-object" src="/asset/img/solovyov.jpg" alt="<?= $this->translate('Dmitry Solovyov') ?>">
+                <a class="media-left" href="/web/img/solovyov.jpg">
+                    <img class="media-object" src="/web/img/solovyov.jpg" alt="<?= $this->translate('Dmitry Solovyov') ?>">
                 </a>
                 <div class="media-body lead">
                     <h2 class="media-heading"><?= $this->translate('Dmitry Solovyov') ?></h2>
@@ -94,7 +94,7 @@
             <? foreach ($context['projects'] as $project) : ?>
                 <div class="col-sm-6 col-lg-4">
                     <div class="project__item">
-                        <img class="img-fluid" src="/asset/img/projects/<?= $project['img'] ?>">
+                        <img class="img-fluid" src="/web/img/projects/<?= $project['img'] ?>">
                         <article>
                             <div class="table">
                                 <div class="table-cell center">
@@ -114,7 +114,7 @@
     </div>
 </section>
 
-<script src="/asset/script.js"></script>
+<script src="/web/script.js"></script>
 
 </body>
 </html>

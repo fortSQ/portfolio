@@ -1,12 +1,14 @@
 <?php
 
+defined('PROJECT_PATH') || define('PROJECT_PATH', realpath(__DIR__ . '/..'));
+
 require_once 'Request.php';
 require_once 'Response.php';
 require_once 'LanguageService.php';
 
 class Application
 {
-    const CONFIG_FILE = 'config.ini';
+    const CONFIG_FILE = PROJECT_PATH . '/app/config/config.ini';
 
     private $config;
 
@@ -21,7 +23,7 @@ class Application
         $app->initConfig();
 
         try {
-            LanguageService::init($app);
+            LanguageService::register($app);
         } catch (Exception $e) {
             echo sprintf('Service load error: %s', $e->getMessage());
             die(-1);
@@ -68,7 +70,7 @@ class Application
 
     public function renderView($filename, $context)
     {
-        require_once realpath(__DIR__ . DIRECTORY_SEPARATOR . $this->config['view_folder'] . DIRECTORY_SEPARATOR . $filename . '.phtml');
+        require_once PROJECT_PATH . $this->config['view_folder'] . DIRECTORY_SEPARATOR . $filename . '.phtml';
     }
 
     /**

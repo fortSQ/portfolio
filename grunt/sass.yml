@@ -3,10 +3,10 @@ dev:
     sourceComments: true
     outputStyle: expanded
   files:
-    asset/style.css: scss/style.scss
+    web/style.css: scss/style.scss
 
 prod:
   options:
     outputStyle: compressed
   files:
-    asset/style.css: scss/style.scss
+    web/style.css: scss/style.scss

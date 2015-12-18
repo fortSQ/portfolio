@@ -36,10 +36,10 @@ $spacers: map-merge($spacers, $spacers-new);
 
 @import "../bower_components/bootstrap/scss/type";
 
-$fa-font-path: "/asset/fonts/font-awesome";
+$fa-font-path: "/web/fonts/font-awesome";
 @import "../bower_components/components-font-awesome/scss/font-awesome";
 
-$roboto-font-path: "/asset/fonts/roboto";
+$roboto-font-path: "/web/fonts/roboto";
 @import "../bower_components/roboto-fontface/css/roboto-fontface.scss";
 
 @import "style/mixins";
