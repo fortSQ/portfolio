@@ -1,13 +1,4 @@
-#main:
-#  options:
-#    mangle:
-#      except: ["jQuery"]
-#    sourceMap: true
-#  files:
-#    public_html/js/_compiled/grunt/frontend.js: # самопис
-#      - frontend/js/**/*.js
-
-vendors:
+default:
   options:
     mangle:
       except: ["jQuery"]
@@ -15,3 +6,4 @@ vendors:
   files:
     web/script.js:
       - bower_components/jquery/dist/jquery.min.js
+      - js/**/*.js

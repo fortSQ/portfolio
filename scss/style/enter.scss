@@ -1,0 +1,32 @@
+.enter {
+  hr {
+    margin: 0;
+    border: none;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    transition: .5s ease-out;
+  }
+
+  hr:first-child {
+    left: 0;
+    right: 50%;
+  }
+
+  hr:last-child {
+    right: 0;
+    left: 50%;
+  }
+
+  &.anim {
+    hr:first-child {
+      right: 100%;
+    }
+
+    hr:last-child {
+      left: 100%;
+    }
+  }
+}
