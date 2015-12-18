@@ -1,6 +1,6 @@
 <?php
 
-require_once 'src/Application.php';
+require_once '../src/Application.php';
 
 $app = Application::run();
 
