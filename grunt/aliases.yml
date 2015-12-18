@@ -3,7 +3,7 @@ default:
     - clean
     - copy
     - sass:dev
-    #- uglify
+    - uglify
     - watch:sass_dev
 
 prod:
@@ -11,4 +11,4 @@ prod:
     - clean
     - copy
     - sass:prod
-    #- uglify
+    - uglify
