@@ -50,6 +50,10 @@ nav {
   &-body {
     color: $ui-color-orange;
 
+    &.lead {
+      padding-top: 1em;
+    }
+
     h2 {
       color: $gray-dark;
       font-weight: normal;
