@@ -1,0 +1,15 @@
+<?
+/** @var Application $this */
+/** @var array $context */
+?>
+
+<h1><?= $this->translate('vstu_header') ?></h1>
+
+<? foreach ($context['publications'] as $year => $list): ?>
+    <h3><?= $year ?></h3>
+    <ol>
+        <? foreach ($list as $item): ?>
+            <li><?= $item ?></li>
+        <? endforeach ?>
+    </ol>
+<? endforeach ?>
