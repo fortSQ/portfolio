@@ -3,13 +3,18 @@
 /** @var array $context */
 ?>
 
-<h1><?= $this->translate('vstu_header') ?></h1>
+<? $anotherLang = $this->getCurrentLanguage() == 'ru' ? 'en' : 'ru'?>
+<h1><?= $this->translate('vstu_header') ?> <small><a href="/change-lang.php?lang=<?= $anotherLang ?>"><?= strtoupper($anotherLang) ?></a></small></h1>
 
+<? $total = 0 ?>
 <? foreach ($context['publications'] as $year => $list): ?>
     <h3><?= $year ?></h3>
     <ol>
         <? foreach ($list as $item): ?>
-            <li><?= $item ?></li>
+            <li><?= isset($item[$this->getCurrentLanguage()]) ? $item[$this->getCurrentLanguage()] : '-' ?></li>
+            <? $total++ ?>
         <? endforeach ?>
     </ol>
 <? endforeach ?>
+
+<h3><?= $this->translate('Total') ?>: <big><?= $total ?></big></h3>

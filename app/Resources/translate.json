@@ -31,5 +31,9 @@
   "vstu_header": {
     "ru": "Публикации",
     "en": "Publications"
+  },
+
+  "Total": {
+    "ru": "Всего"
   }
 }

@@ -5,12 +5,14 @@ class Request
     private $get    = [];
     private $post   = [];
     private $cookie = [];
+    private $server = [];
 
     public function __construct()
     {
         $this->get = $_GET;
         $this->post = $_POST;
         $this->cookie = $_COOKIE;
+        $this->server = $_SERVER;
     }
 
     public function get($name, $default = null)
@@ -26,6 +28,11 @@ class Request
     public function getCookie($name, $default = null)
     {
         return $this->_get($this->cookie, $name) ?: $default;
+    }
+
+    public function getServer($name, $default = null)
+    {
+        return $this->_get($this->server, $name) ?: $default;
     }
 
     /**

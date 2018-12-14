@@ -9,4 +9,4 @@ $lang = $app->getRequest()->lang;
 $serviceLang = $app->getService('lang');
 $serviceLang->changeLanguage($lang);
 
-$app->getResponse()->redirect('/');
+$app->getResponse()->redirect($app->getRequest()->getServer('HTTP_REFERER', '/'));
