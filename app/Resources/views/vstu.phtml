@@ -3,6 +3,17 @@
 /** @var array $context */
 ?>
 
+<!DOCTYPE html>
+<html lang="<?= $this->getCurrentLanguage() ?>">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="author" content="Dmitry V. Romanov">
+    <title><?= $this->translate('vstu_header') ?></title>
+    <style>h1, footer { text-align: center; }</style>
+</head>
+<body>
+
 <? $anotherLang = $this->getCurrentLanguage() == 'ru' ? 'en' : 'ru'?>
 <h1><?= $this->translate('vstu_header') ?> <small><a href="/change-lang.php?lang=<?= $anotherLang ?>"><?= strtoupper($anotherLang) ?></a></small></h1>
 
@@ -19,6 +30,10 @@
 
 <h3><?= $this->translate('Total') ?>: <big><?= $total ?></big></h3>
 
-<a href="https://elibrary.ru/author_counter_click.asp?id=<?= $this->getConfig('elibrary_id') ?>" target=_blank>
-    <img src="https://elibrary.ru/author_counter.aspx?id=<?= $this->getConfig('elibrary_id') ?>" title="<?= $this->translate('elibrary_link') ?>" border="0" height="31" width="88">
-</a>
+<footer>
+    <a href="https://elibrary.ru/author_counter_click.asp?id=<?= $this->getConfig('elibrary_id') ?>" target=_blank>
+        <img src="https://elibrary.ru/author_counter.aspx?id=<?= $this->getConfig('elibrary_id') ?>" title="<?= $this->translate('elibrary_link') ?>" border="0" height="31" width="88">
+    </a>
+</footer>
+
+</body>
