@@ -35,5 +35,10 @@
 
   "Total": {
     "ru": "Всего"
+  },
+
+  "elibrary_link": {
+    "ru": "Профиль автора в Science Index",
+    "en": "Author's profile in Science Index"
   }
 }

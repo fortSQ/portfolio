@@ -18,3 +18,7 @@
 <? endforeach ?>
 
 <h3><?= $this->translate('Total') ?>: <big><?= $total ?></big></h3>
+
+<a href="https://elibrary.ru/author_counter_click.asp?id=<?= $this->getConfig('elibrary_id') ?>" target=_blank>
+    <img src="https://elibrary.ru/author_counter.aspx?id=<?= $this->getConfig('elibrary_id') ?>" title="<?= $this->translate('elibrary_link') ?>" border="0" height="31" width="88">
+</a>
