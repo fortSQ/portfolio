@@ -36,6 +36,10 @@
   "Total": {
     "ru": "Всего"
   },
+  "vak_count": {
+    "ru": "из них ВАК",
+    "en": "including VAK"
+  },
 
   "elibrary_link": {
     "ru": "Профиль автора в Science Index",

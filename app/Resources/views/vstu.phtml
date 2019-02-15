@@ -10,7 +10,12 @@
     <meta charset="UTF-8">
     <meta name="author" content="Dmitry V. Romanov">
     <title><?= $this->translate('vstu_header') ?></title>
-    <style>h1, footer { text-align: center; }</style>
+    <style>
+        h1, footer { text-align: center; }
+        h1, h3 { margin: 0.1em 0; }
+        ol { margin-top: 0.5em; }
+        .vak { text-decoration: underline; }
+    </style>
 </head>
 <body>
 
@@ -18,17 +23,20 @@
 <h1><?= $this->translate('vstu_header') ?> <small><a href="/change-lang.php?lang=<?= $anotherLang ?>"><?= strtoupper($anotherLang) ?></a></small></h1>
 
 <? $total = 0 ?>
+<? $vak = 0 ?>
 <? foreach ($context['publications'] as $year => $list): ?>
     <h3><?= $year ?></h3>
     <ol>
         <? foreach ($list as $item): ?>
-            <li><?= isset($item[$this->getCurrentLanguage()]) ? $item[$this->getCurrentLanguage()] : '-' ?></li>
+            <? $isVak = isset($item['is_vak']) && $item['is_vak'] ?>
+            <li class="<?= $isVak ? 'vak' : '' ?>"><?= isset($item[$this->getCurrentLanguage()]) ? $item[$this->getCurrentLanguage()] : '-' ?></li>
             <? $total++ ?>
+            <? if ($isVak): $vak++; endif ?>
         <? endforeach ?>
     </ol>
 <? endforeach ?>
 
-<h3><?= $this->translate('Total') ?>: <big><?= $total ?></big></h3>
+<h3><?= $this->translate('Total') ?>: <big><?= $total ?></big><small>, </small><small class="vak"><?= $this->translate('vak_count') ?></small><small>: </small><big><?= $vak ?></big></h3>
 
 <footer>
     <a href="https://elibrary.ru/author_counter_click.asp?id=<?= $this->getConfig('elibrary_id') ?>" target=_blank>
