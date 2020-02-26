@@ -1,4 +1,11 @@
 {
+  "2020": [
+    {
+      "ru": "Романов Д.В., Рындин А.А., Скворцов Ю.С. Методика управления антифрод-системой в логистической отрасли на основе байесовского классификатора // Вестник Воронежского государственного технического университета. 2020. Т. 16. № 1. С. 23-32",
+      "en": "Romanov D.V., Ryndin A.A., Skvortsov Yu.S. \"Control methodology of the antifraud system in logistics based on the bayes classifier\", Bulletin of Voronezh State Technical University (Vestnik Voronezhskogo gosudarstvennogo tekhnicheskogo universiteta), 2020, vol. 16, no. 1, pp. 23-32",
+      "is_vak": true
+    }
+  ],
   "2019": [
     {
       "ru": "Романов Д.В. Моделирование облачного сервиса двухклассовой классификации с помощью Microsoft Azure Machine Learning // Интеллектуальные информационные системы: тр. междунар. науч.-практ. конф.: в 2 ч. - Воронеж: ВГТУ, 2019. - Ч. 1. - С. 177-180",
